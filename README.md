@@ -2,7 +2,11 @@
 ### Date: 9/1/22
 ## By: Jackson McHugh
 ### **Links**
-[Trello](https://trello.com/b/QypYT74A/stat-tracker)[LinkedIn](https://www.linkedin.com/in/jackson-mchugh/)[GitHub](https://github.com/Jacksonmchugh)
+[Trello](https://trello.com/b/QypYT74A/stat-tracker)
+
+[LinkedIn](https://www.linkedin.com/in/jackson-mchugh/)
+
+[GitHub](https://github.com/Jacksonmchugh)
 
 ### **_Description_**
 
@@ -20,6 +24,7 @@
 
 ### **_Getting Started_**
 Fork and Clone
+
 Run npm i
 
 ### **_ScreenShots_**
