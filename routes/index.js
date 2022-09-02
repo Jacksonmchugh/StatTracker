@@ -13,3 +13,5 @@ router.get('/player/:id', players.getPlayer)
 router.put('/players/:id', players.updatePlayer)
 router.delete('/players/:id', players.deletePlayer)
 // stat routes
+
+module.exports = router
