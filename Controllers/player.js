@@ -15,6 +15,10 @@ const getPlayer = async (req, res) => {
   let player = await Player.findById(req.params.id).populate('team')
   res.send(player)
 }
+const getAllPlayers = async (req, res) => {
+  let allPlayers = await Player.find({})
+  res.send(allPlayers)
+}
 
 const updatePlayer = async (req, res) => {
   let updatePlayer = await Player.findByIdAndUpdate(req.params.id, req.body, {
@@ -32,5 +36,6 @@ module.exports = {
   getPlayer,
   createPlayer,
   updatePlayer,
-  deletePlayer
+  deletePlayer,
+  getAllPlayers
 }
