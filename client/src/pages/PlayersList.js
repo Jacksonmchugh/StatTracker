@@ -21,7 +21,6 @@ const PlayerList = (props) => {
           ? players.map((players) => (
               <div>
                 <h2>{players.name}</h2>
-                <h3>{players.team}</h3>
               </div>
             ))
           : ''}
@@ -29,4 +28,4 @@ const PlayerList = (props) => {
     </section>
   )
 }
-export default TeamList
+export default PlayerList

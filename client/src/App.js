@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import TeamList from './pages/TeamList'
+import PlayerList from './pages/PlayersList'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/teams" element={<TeamList />} />
+          <Route path="/players" element={<PlayerList />} />
         </Routes>
       </main>
     </div>

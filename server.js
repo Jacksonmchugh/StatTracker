@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const db = require('./db')
-const { Team } = require('./models')
+const { Team, Player } = require('./models')
 
 const PORT = process.env.PORT || 3001
 const app = express()
@@ -15,6 +15,10 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/teams', async (req, res) => {
   const teams = await Team.find({})
   res.json(teams)
+})
+app.get('/players', async (req, res) => {
+  const players = await Player.find({})
+  res.json(players)
 })
 
 app.listen(PORT, () => {
