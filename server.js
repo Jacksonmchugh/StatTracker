@@ -11,11 +11,12 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-// controllers
+//  team controllers
 app.get('/teams', async (req, res) => {
   const teams = await Team.find({})
   res.json(teams)
 })
+// player controllers
 app.get('/players', async (req, res) => {
   const players = await Player.find({})
   res.json(players)

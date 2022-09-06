@@ -4,8 +4,7 @@ const teamSchema = new Schema(
   {
     name: { type: String, required: true },
     location: { type: String, required: true },
-    picture: { type: String, required: true },
-    players: [{ type: Schema.Types.ObjectId, ref: 'Player' }]
+    picture: { type: String, required: true }
   },
   { timestamps: true }
 )

@@ -8,6 +8,7 @@ const Nav =()=>{
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/teams'>Teams</NavLink>
                 <NavLink to='/players'>Players</NavLink>
+                <NavLink to='/newteam'>Add a team</NavLink>
             </div>
         </nav>
     )
