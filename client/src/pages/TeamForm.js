@@ -16,7 +16,7 @@ function TeamForm() {
   useEffect(() => {
     const getTeam = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/teamform`)
+        let res = await axios.get(`${BASE_URL}/teams`)
         setTeam(res.data)
       } catch (eer) {
         console.log(eer)
@@ -55,6 +55,14 @@ function TeamForm() {
           onChange={handleChange}
           name={'location'}
           placeholder={'location'}
+        />
+        <input
+          type="image"
+          id="image"
+          value={team.image}
+          onChange={handleChange}
+          name="picture"
+          placeholder="picture"
         />
         <button type="submit">Add team</button>
       </form>

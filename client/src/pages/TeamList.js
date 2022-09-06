@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 const TeamList = (props) => {
   const [teams, setTeams] = useState('')
+
   useEffect(() => {
     const getTeams = async () => {
       const res = await axios.get(`${BASE_URL}/teams`)
