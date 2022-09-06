@@ -12,6 +12,7 @@ const App = () => {
   useEffect(() => {
     const getTeams = async () => {
       const res = await axios.get(`${BASE_URL}/api/teams`)
+      console.log(res.data)
       setTeams(res.data)
     }
     getTeams()
