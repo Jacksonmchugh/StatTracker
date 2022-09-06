@@ -3,6 +3,7 @@ const TeamCard = ({ team })=>{
         <span className='team-card'>
             <h3>{team.name}</h3>
             <h4>{team.location}</h4>
+            <h4>{team.picture}</h4>
         </span>
     )
 }
