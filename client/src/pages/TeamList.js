@@ -1,12 +1,10 @@
 import React from 'react'
-import TeamCard from '../components/TeamCard'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-const TeamList = ({ team }) => {
-  const [teams, setTeams] = useState([])
-  console.log('teams')
+const TeamList = (props) => {
+  const [teams, setTeams] = useState('')
   useEffect(() => {
     const getTeams = async () => {
       const res = await axios.get(`${BASE_URL}/teams`)
@@ -19,7 +17,18 @@ const TeamList = ({ team }) => {
     <section className="page" id="restaurant-list">
       <h3>Teams</h3>
       <div className="flex">
-        {team ? team.map((teams) => <TeamCard team={team} />) : ''}
+        {teams
+          ? teams.map((teams) => (
+              <div>
+                <img
+                  style={{ display: 'block' }}
+                  src={teams.picture}
+                  alt={teams.name}
+                />
+                <h2>{teams.name}</h2>
+              </div>
+            ))
+          : ''}
       </div>
     </section>
   )

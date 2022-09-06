@@ -14,8 +14,6 @@ app.use(express.urlencoded({ extended: false }))
 // controllers
 app.get('/teams', async (req, res) => {
   const teams = await Team.find({})
-  console.log('teams')
-  console.log(teams)
   res.json(teams)
 })
 
