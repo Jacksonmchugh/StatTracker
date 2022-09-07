@@ -54,14 +54,6 @@ function PlayerForm() {
           name={'age'}
           placeholder={'age'}
         />
-        <input
-          type="text"
-          id="team"
-          value={player.team}
-          onChange={handleChange}
-          name="team"
-          placeholder="team"
-        />
 
         <button type="submit">Add Player</button>
       </form>

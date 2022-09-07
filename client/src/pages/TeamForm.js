@@ -11,7 +11,7 @@ function TeamForm() {
     picture: ''
   }
   const [team, setTeam] = useState({})
-
+  let navigate = useNavigate()
   const [formState, setFormState] = useState(initialState)
   useEffect(() => {
     const getTeam = async () => {
@@ -32,8 +32,11 @@ function TeamForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log(formState)
-    let res = await axios.post(`${BASE_URL}/teamform`, formState)
+    let newTeam = await axios.post(`${BASE_URL}/teamform`, formState)
+    console.log(newTeam)
+    alert('You created a team')
     setFormState(initialState)
+    navigate('/teams')
   }
 
   return (
@@ -43,7 +46,7 @@ function TeamForm() {
         <input
           type="text"
           id="name"
-          value={team.name}
+          value={formState.name}
           onChange={handleChange}
           name={'name'}
           placeholder={'name'}
@@ -51,7 +54,7 @@ function TeamForm() {
         <input
           type="text"
           id="location"
-          value={team.location}
+          value={formState.location}
           onChange={handleChange}
           name={'location'}
           placeholder={'location'}
@@ -59,23 +62,16 @@ function TeamForm() {
         <input
           type="text"
           id="picture"
-          value={team.picture}
+          value={formState.picture}
           onChange={handleChange}
           name="picture"
           placeholder="picture"
         />
-        <input
-          type="text"
-          id="players"
-          value={team.players}
-          onChange={handleChange}
-          name="players"
-          placeholder="players"
-        />
+
         <input
           type="text"
           id="description"
-          value={team.description}
+          value={formState.description}
           onChange={handleChange}
           name="description"
           placeholder="description"

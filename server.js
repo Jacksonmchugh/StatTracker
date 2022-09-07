@@ -11,6 +11,7 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
 //  team controllers
 app.get('/teams', async (req, res) => {
   const teams = await Team.find({})
@@ -26,15 +27,14 @@ app.get('/teams/:id', async (req, res) => {
   res.json(teamCard)
 })
 app.post('/teamform', async (req, res) => {
-  let newTeam = await Team.create(req.body)
+  let newTeamBody = {
+    ...req.body
+  }
+  let newTeam = await Team.create(newTeamBody)
   res.send(newTeam)
 })
-app.post('/updateteam', async (req, res) => {
-  let teamId = parseInt(req.params.team_id)
-  let updateTeam = await Team.update(req.body, {
-    where: { id: teamId },
-    returning: true
-  })
+app.put('/teams/:id', async (req, res) => {
+  let updateTeam = await Team.updateOne(req.body)
   res.send(updateTeam)
 })
 app.delete('/teams/:id', async (req, res) => {

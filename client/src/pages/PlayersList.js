@@ -1,27 +1,36 @@
 import React from 'react'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useNavigate } from 'react'
 
 const PlayerList = (props) => {
-  const [players, setPlayers] = useState('')
+  const [players, setPlayer] = useState('')
+  //   let navigate = useNavigate()
+
   useEffect(() => {
-    const getPlayers = async () => {
+    const getPlayer = async () => {
       const res = await axios.get(`${BASE_URL}/players`)
       console.log(res.data)
-      setPlayers(res.data)
+      setPlayer(res.data)
     }
-    getPlayers()
+    getPlayer()
   }, [])
+
   return (
     <section className="page" id="restaurant-list">
       <h3>Players</h3>
       <div className="flex">
         {players
           ? players.map((players) => (
-              <div>
-                <h2>{players.name}</h2>
-                <h3>{players.team}</h3>
+              <div
+              // className="team-card"
+              // onClick={() => showPlayer(players)}
+              // key={players._id}
+              >
+                <div>
+                  <h2>{players.name}</h2>
+                  <h3>{players.team}</h3>
+                </div>
               </div>
             ))
           : ''}

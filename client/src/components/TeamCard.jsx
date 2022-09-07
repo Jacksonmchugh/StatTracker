@@ -38,8 +38,10 @@ const TeamCard = (props)=>{
         setFormState({...formState, [event.target.id]: event.target.value })
       }
       const handleSubmit = async (event)=>{
+        console.log('updating teams here')
         event.preventDefault()
-        let res = await axios.post(`${BASE_URL}/teams/${id}`, formState)
+        console.log('updating teams')
+        let res = await axios.put(`${BASE_URL}/teams/${id}`, formState)
         setFormState(initialState)
         console.log(res)
         alert('You updated your team.')
@@ -101,15 +103,7 @@ const TeamCard = (props)=>{
                             value={formState.picture}
                             placeholder={team.picture}
                         /></div>
-                        <div className='input1'>
-                        <label htmlFor="title">Players:</label>
-                        <input
-                            type="text"
-                            id="players"
-                            onChange={handleChange}
-                            value={formState.players}
-                            placeholder={team.players}
-                        /></div>
+                        
                         <div className='input1'>
                         <label htmlFor="title">Description:</label>
                         <input
