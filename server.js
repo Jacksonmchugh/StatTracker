@@ -33,6 +33,11 @@ app.post('/updateteam', async (req, res) => {
   let updateTeam = await Team.updateOne(req.body)
   res.send(updateTeam)
 })
+app.delete('/teams/:id', async (req, res) => {
+  let { id } = req.params
+  const teamDetails = await Team.findByIdAndDelete(id)
+  res.send(teamDetails)
+})
 
 // player controllers
 app.get('/players', async (req, res) => {

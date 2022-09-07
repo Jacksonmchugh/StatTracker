@@ -44,6 +44,12 @@ const TeamCard = (props)=>{
         alert('You updated your team.')
         navigate('/teams')
       }
+
+      const deleteTeam = async ()=>{
+        let res = await axios.delete(`${BASE_URL}/teams/${id}`, formState)
+        alert('You deleted this team')
+        navigate('/teams')
+      }
       const refreshPage = ()=>{
         window.location.reload()
       }
@@ -113,6 +119,11 @@ const TeamCard = (props)=>{
                         <div className='button1'>
                             <button type='submit' onClick={refreshPage}>
                                 Update Team
+                            </button>
+                        </div>
+                        <div className='button2'>
+                            <button onClick={deleteTeam}>
+                                Delete Team
                             </button>
                         </div>
                         </div>
