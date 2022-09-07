@@ -2,7 +2,7 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useNavigate, useState } from 'react'
 
-function UpdateTeam() {
+const UpdateTeam = () => {
   const initialState = {
     name: '',
     location: '',
@@ -10,7 +10,7 @@ function UpdateTeam() {
     players: []
   }
   const [team, setTeam] = useState({})
-  let navigate = useNavigate()
+  //   let navigate = useNavigate()
 
   const [formState, setFormState] = useState(initialState)
   useEffect(() => {
@@ -33,7 +33,7 @@ function UpdateTeam() {
     event.preventDefault()
     let res = await axios.post(`${BASE_URL}/updateteam`, formState)
     setFormState(initialState)
-    navigate('/teams')
+    // navigate('/teams')
   }
 
   return (
