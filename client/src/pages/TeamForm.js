@@ -64,6 +64,22 @@ function TeamForm() {
           name="picture"
           placeholder="picture"
         />
+        <input
+          type="text"
+          id="players"
+          value={team.players}
+          onChange={handleChange}
+          name="players"
+          placeholder="players"
+        />
+        <input
+          type="text"
+          id="description"
+          value={team.description}
+          onChange={handleChange}
+          name="description"
+          placeholder="description"
+        />
         <button type="submit">Add team</button>
       </form>
     </div>

@@ -39,6 +39,10 @@ app.get('/players', async (req, res) => {
   const players = await Player.find({})
   res.json(players)
 })
+app.post('/playerform', async (req, res) => {
+  let newPlayer = await Player.create(req.body)
+  res.send(newPlayer)
+})
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
