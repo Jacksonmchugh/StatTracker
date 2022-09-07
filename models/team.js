@@ -4,8 +4,9 @@ const teamSchema = new Schema(
   {
     name: { type: String, required: true },
     location: { type: String, required: true },
-    image: { type: String, required: false },
-    players: [{ type: Schema.Types.ObjectId, required: false }]
+    picture: { type: String, required: true },
+    players: [{ type: Schema.Types.ObjectId, required: true }],
+    description: { type: String, required: true }
   },
   { timestamps: true }
 )

@@ -57,9 +57,9 @@ function TeamForm() {
           placeholder={'location'}
         />
         <input
-          type="image"
-          id="image"
-          value={team.image}
+          type="text"
+          id="picture"
+          value={team.picture}
           onChange={handleChange}
           name="picture"
           placeholder="picture"

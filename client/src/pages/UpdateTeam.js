@@ -7,7 +7,8 @@ const UpdateTeam = () => {
     name: '',
     location: '',
     image: '',
-    players: []
+    players: [],
+    description: ''
   }
   const [team, setTeam] = useState({})
   //   let navigate = useNavigate()
@@ -16,7 +17,7 @@ const UpdateTeam = () => {
   useEffect(() => {
     const getTeam = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/updateteam`)
+        let res = await axios.post(`${BASE_URL}/updateteam`)
         setTeam(res.data)
       } catch (eer) {
         console.log(eer)
@@ -31,9 +32,8 @@ const UpdateTeam = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.post(`${BASE_URL}/updateteam`, formState)
+    let res = await axios.put(`${BASE_URL}/updateteam`, formState)
     setFormState(initialState)
-    // navigate('/teams')
   }
 
   return (
@@ -50,7 +50,7 @@ const UpdateTeam = () => {
         />
         <input
           type="text"
-          id="state"
+          id="location"
           value={team.location}
           onChange={handleChange}
           name={'location'}
@@ -63,6 +63,15 @@ const UpdateTeam = () => {
           onChange={handleChange}
           name={'image'}
           placeholder={'image'}
+        />
+
+        <input
+          type="text"
+          id="image"
+          value={team.players}
+          onChange={handleChange}
+          name={'players'}
+          placeholder={'players'}
         />
         <input
           type="text-area"

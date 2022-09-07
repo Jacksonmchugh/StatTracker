@@ -22,8 +22,8 @@ app.get('/teamform', async (req, res) => {
 })
 app.get('/teams/:id', async (req, res) => {
   let { id } = req.params
-  const teamdetails = await Team.findById(id)
-  res.json(teamdetails)
+  const teamCard = await Team.findById(id)
+  res.json(teamCard)
 })
 app.post('/teamform', async (req, res) => {
   let newTeam = await Team.create(req.body)
