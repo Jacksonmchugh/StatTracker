@@ -20,10 +20,20 @@ app.get('/teamform', async (req, res) => {
   let teamform = await Team.find({})
   res.send(teamform)
 })
+app.get('/teams/:id', async (req, res) => {
+  let { id } = req.params
+  const teamdetails = await Team.findById(id)
+  res.json(teamdetails)
+})
 app.post('/teamform', async (req, res) => {
   let newTeam = await Team.create(req.body)
   res.send(newTeam)
 })
+app.post('/updateteam', async (req, res) => {
+  let updateTeam = await Team.updateOne(req.body)
+  res.send(updateTeam)
+})
+
 // player controllers
 app.get('/players', async (req, res) => {
   const players = await Player.find({})

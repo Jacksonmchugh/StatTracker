@@ -1,10 +1,15 @@
-import React from 'react'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const TeamList = (props) => {
-  const [teams, setTeams] = useState('')
+  let navigate = useNavigate()
+  const [team, setTeams] = useState('')
+
+  const showTeam = (team) => {
+    navigate(`/teams/${team._id}`)
+  }
 
   useEffect(() => {
     const getTeams = async () => {
@@ -13,20 +18,24 @@ const TeamList = (props) => {
       setTeams(res.data)
     }
     getTeams()
-  }, [])
+  }, [props.team])
   return (
     <section className="page" id="restaurant-list">
       <h3>Teams</h3>
       <div className="flex">
-        {teams
-          ? teams.map((teams) => (
-              <div>
+        {team
+          ? team.map((team) => (
+              <div
+                className="team-card"
+                onClick={() => showTeam(team)}
+                key={team._id}
+              >
                 <img
                   style={{ display: 'block' }}
-                  src={teams.picture}
-                  alt={teams.name}
+                  src={team.picture}
+                  alt={team.name}
                 />
-                <h2>{teams.name}</h2>
+                <h2>{team.name}</h2>
               </div>
             ))
           : ''}
