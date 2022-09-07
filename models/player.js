@@ -4,7 +4,7 @@ const playerSchema = new Schema(
   {
     name: { type: String, required: true },
     age: { type: String, required: true },
-    team: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
+    team: [{ type: Schema.Types.ObjectId, ref: 'Team', required: false }]
   },
   { timestamps: true }
 )

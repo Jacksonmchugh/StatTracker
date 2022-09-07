@@ -9,7 +9,6 @@ const Nav =()=>{
                 <NavLink to='/teams'>Teams</NavLink>
                 <NavLink to='/players'>Players</NavLink>
                 <NavLink to='/newteam'>Add a Team</NavLink>
-                <NavLink to='/newplayer'>Add a Player</NavLink>
             </div>
         </nav>
     )

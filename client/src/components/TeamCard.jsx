@@ -39,8 +39,9 @@ const TeamCard = (props)=>{
       }
       const handleSubmit = async (event)=>{
         event.preventDefault()
-        let res = await axios.put(`${BASE_URL}/teams/${id}`, formState)
+        let res = await axios.post(`${BASE_URL}/teams/${id}`, formState)
         setFormState(initialState)
+        console.log(res)
         alert('You updated your team.')
         navigate('/teams')
       }
@@ -52,6 +53,10 @@ const TeamCard = (props)=>{
       }
       const refreshPage = ()=>{
         window.location.reload()
+      }
+
+      const addPlayer = async ()=>{
+        navigate('/newplayer')
       }
 
 
@@ -122,6 +127,11 @@ const TeamCard = (props)=>{
                             </button>
                         </div>
                         <div className='button2'>
+                            <button  onClick={addPlayer}>
+                                Add players
+                            </button>
+                        </div>
+                        <div className='button3'>
                             <button onClick={deleteTeam}>
                                 Delete Team
                             </button>

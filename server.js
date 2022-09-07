@@ -30,7 +30,11 @@ app.post('/teamform', async (req, res) => {
   res.send(newTeam)
 })
 app.post('/updateteam', async (req, res) => {
-  let updateTeam = await Team.updateOne(req.body)
+  let teamId = parseInt(req.params.team_id)
+  let updateTeam = await Team.update(req.body, {
+    where: { id: teamId },
+    returning: true
+  })
   res.send(updateTeam)
 })
 app.delete('/teams/:id', async (req, res) => {
