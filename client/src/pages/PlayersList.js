@@ -1,11 +1,16 @@
 import React from 'react'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
-import { useEffect, useState, useNavigate } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const PlayerList = (props) => {
-  const [players, setPlayer] = useState('')
-  //   let navigate = useNavigate()
+  let navigate = useNavigate()
+  const [player, setPlayer] = useState('')
+
+  const showPlayer = (player) => {
+    navigate(`/players/${player._id}`)
+  }
 
   useEffect(() => {
     const getPlayer = async () => {
@@ -14,22 +19,22 @@ const PlayerList = (props) => {
       setPlayer(res.data)
     }
     getPlayer()
-  }, [])
+  }, [props.player])
 
   return (
     <section className="page" id="restaurant-list">
       <h3>Players</h3>
       <div className="flex">
-        {players
-          ? players.map((players) => (
+        {player
+          ? player.map((player) => (
               <div
-              // className="team-card"
-              // onClick={() => showPlayer(players)}
-              // key={players._id}
+                className="player-card"
+                onClick={() => showPlayer(player)}
+                key={player._id}
               >
                 <div>
-                  <h2>{players.name}</h2>
-                  <h3>{players.team}</h3>
+                  <h2>{player.name}</h2>
+                  <h3>{player.team}</h3>
                 </div>
               </div>
             ))

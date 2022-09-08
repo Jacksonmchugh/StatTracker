@@ -46,12 +46,17 @@ app.delete('/teams/:id', async (req, res) => {
 
 // player controllers
 app.get('/players', async (req, res) => {
-  const players = await Player.find({})
-  res.json(players)
+  const player = await Player.find({})
+  res.json(player)
 })
 app.post('/playerform', async (req, res) => {
   let newPlayer = await Player.create(req.body)
   res.send(newPlayer)
+})
+app.get('/players/:id', async (req, res) => {
+  let { id } = req.params
+  const playerCard = await Player.findById(id)
+  res.json(playerCard)
 })
 
 app.listen(PORT, () => {

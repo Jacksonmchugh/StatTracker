@@ -7,6 +7,7 @@ import PlayerList from './pages/PlayersList'
 import TeamForm from './pages/TeamForm'
 import TeamCard from './components/TeamCard'
 import PlayerForm from './pages/PlayerForm'
+import PlayerCard from './components/PlayerCard'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/newteam" element={<TeamForm />} />
           <Route path="/teams/:id" element={<TeamCard />} />
           <Route path="/newplayer" element={<PlayerForm />} />
+          <Route path="/players/:id" element={<PlayerCard />} />
         </Routes>
       </main>
     </div>

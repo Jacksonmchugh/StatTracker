@@ -52,9 +52,7 @@ const TeamCard = (props)=>{
         alert('You deleted this team')
         navigate('/teams')
       }
-    //   const refreshPage = ()=>{
-    //     window.location.reload()
-    //   }
+    
 
       const addPlayer = async ()=>{
         navigate('/newplayer')
