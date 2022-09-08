@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import ScoreTotal from './ScoreTotal'
 
 
 
@@ -52,8 +52,15 @@ const PlayerCard = (props)=>{
         alert('You deleted this player')
         navigate('/players')
       }
-      const totalScore =({ totalscores })
 
+    const [totalScores, setTotalScores] = useState(0);
+    function incrementScores() {
+          setTotalScores(totalScores + 1);
+        }
+        function decrementScores() {
+          if (totalScores) setTotalScores(totalScores - 1);
+        }
+    
 
       
 
@@ -69,9 +76,9 @@ const PlayerCard = (props)=>{
                     <h1 className='details'>{player.team}</h1>
                     <h1 className='stats'>Stats</h1>
                     <h2>Scores:
-                        <p>{totalScore}</p>
-                        <button>+</button>
-                        <button>-</button>
+                        <p>{totalScores}</p>
+                        <button className='increment' onClick={incrementScores}>+</button>
+                        <button className='decrement' onClick={decrementScores}>-</button>
                     </h2>
                     <h2>Drops:
                         <p></p>
