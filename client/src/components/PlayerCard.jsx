@@ -60,6 +60,14 @@ const PlayerCard = (props)=>{
         function decrementScores() {
           if (totalScores) setTotalScores(totalScores - 1);
         }
+
+        const [totalDrops, setTotalDrops] = useState(0);
+        function incrementDrops() {
+              setTotalDrops(totalDrops + 1);
+            }
+            function decrementDrops() {
+              if (totalDrops) setTotalDrops(totalDrops - 1);
+            }
     
 
       
@@ -81,9 +89,9 @@ const PlayerCard = (props)=>{
                         <button className='decrement' onClick={decrementScores}>-</button>
                     </h2>
                     <h2>Drops:
-                        <p></p>
-                        <button>+</button>
-                        <button>-</button>
+                        <p>{totalDrops}</p>
+                        <button className='increment' onClick={incrementDrops}>+</button>
+                        <button className='decrement' onClick={decrementDrops}>-</button>
                     </h2>
                     <h2>Blocks:
                         <p></p>
