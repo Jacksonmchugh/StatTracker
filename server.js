@@ -59,9 +59,14 @@ app.get('/players/:id', async (req, res) => {
   res.json(playerCard)
 })
 app.put('/players/:id', async (req, res) => {
-  let playerId = parseInt(req.params.team_id)
+  let playerId = parseInt(req.params.player_id)
   let updatePlayer = await Player.updateOne(req.body)
   res.send(updatePlayer)
+})
+app.delete('/players/:id', async (req, res) => {
+  let { id } = req.params
+  const playerDetails = await Player.findByIdAndDelete(id)
+  res.send(playerDetails)
 })
 
 app.listen(PORT, () => {

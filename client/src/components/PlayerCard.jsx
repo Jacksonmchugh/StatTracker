@@ -43,7 +43,13 @@ const PlayerCard = (props)=>{
         setFormState(initialState)
         console.log(res)
         alert('You updated a player.')
-        navigate('/player')
+        navigate('/players')
+      }
+
+      const deletePlayer = async ()=>{
+        let res = await axios.delete(`${BASE_URL}/players/${id}`, formState)
+        alert('You deleted this player')
+        navigate('/players')
       }
 
 
@@ -85,11 +91,11 @@ const PlayerCard = (props)=>{
                                 Update Player
                             </button>
                         </div>
-                        {/* <div className='button3'>
-                            <button onClick={deleteTeam}>
-                                Delete Team
+                        <div className='button3'>
+                            <button onClick={deletePlayer}>
+                                Delete Player
                             </button>
-                        </div> */}
+                        </div>
                         </div>
                     </form>
                 </div>
