@@ -1,7 +1,13 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
+
+let dbUrl =
+  process.env.NODE_ENV === 'production'
+    ? process.env.MONGODB_URI
+    : 'mongodb://127.0.0.1:27017/statTrackerDatabase'
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/statTrackerDatabase')
+  .connect('dbUrl')
   .then(() => {
     console.log('Successfully connected to Stat Tracker!')
   })

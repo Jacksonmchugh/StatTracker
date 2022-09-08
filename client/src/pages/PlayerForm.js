@@ -10,6 +10,7 @@ function PlayerForm() {
     age: '',
     team: ''
   }
+  let navigate = useNavigate()
   const [player, setPlayer] = useState({})
   const [formState, setFormState] = useState(initialState)
   useEffect(() => {
@@ -32,6 +33,7 @@ function PlayerForm() {
     console.log(formState)
     let res = await axios.post(`${BASE_URL}/playerform`, formState)
     setFormState(initialState)
+    navigate('/players')
   }
 
   return (
@@ -53,6 +55,14 @@ function PlayerForm() {
           onChange={handleChange}
           name={'age'}
           placeholder={'age'}
+        />
+        <input
+          type="text"
+          id="team"
+          value={player.team}
+          onChange={handleChange}
+          name={'team'}
+          placeholder={'team'}
         />
 
         <button type="submit">Add Player</button>
