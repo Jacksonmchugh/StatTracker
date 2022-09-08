@@ -58,6 +58,11 @@ app.get('/players/:id', async (req, res) => {
   const playerCard = await Player.findById(id)
   res.json(playerCard)
 })
+app.put('/players/:id', async (req, res) => {
+  let playerId = parseInt(req.params.team_id)
+  let updatePlayer = await Player.updateOne(req.body)
+  res.send(updatePlayer)
+})
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)

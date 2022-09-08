@@ -32,7 +32,20 @@ const PlayerCard = (props)=>{
         setPlayer(selectedPlayer)
       }, [])
 
-    
+      const handleChange = (event)=>{
+        setFormState({...formState, [event.target.id]: event.target.value })
+      }
+      const handleSubmit = async (event)=>{
+        console.log('updating player here')
+        event.preventDefault()
+        console.log('updating teams')
+        let res = await axios.put(`${BASE_URL}/players/${id}`, formState)
+        setFormState(initialState)
+        console.log(res)
+        alert('You updated a player.')
+        navigate('/player')
+      }
+
 
       
 
@@ -43,6 +56,43 @@ const PlayerCard = (props)=>{
                 <div className="details_container">
                     <h1 className="details">{player.age}</h1>
                     <h1 className='details'>{player.team}</h1>
+                    <div className='form_section'>
+                    <h1 className='form_header_update'>Edit Player</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className='form_container'>
+                        <div className='input1'>
+                        <label htmlFor="title">Name:</label>
+                        <input
+                        type="text"
+                        id="name"
+                        onChange={handleChange}
+                        value={formState.name}
+                        placeholder={player.name}
+                        /></div>
+                        <div className='input1'>
+                        <label htmlFor="title">Age:</label>
+                        <input
+                            type="text"
+                            id="age"
+                            onChange={handleChange}
+                            value={formState.age}
+                            placeholder={player.age}
+                        /></div>
+                        <div className='form_button'>
+                        </div>
+                        <div className='button1'>
+                            <button type='submit' >
+                                Update Player
+                            </button>
+                        </div>
+                        {/* <div className='button3'>
+                            <button onClick={deleteTeam}>
+                                Delete Team
+                            </button>
+                        </div> */}
+                        </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </div>
