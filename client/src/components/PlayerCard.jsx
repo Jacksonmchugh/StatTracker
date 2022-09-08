@@ -68,6 +68,14 @@ const PlayerCard = (props)=>{
             function decrementDrops() {
               if (totalDrops) setTotalDrops(totalDrops - 1);
             }
+
+            const [totalBlocks, setTotalBlocks] = useState(0);
+            function incrementBlocks() {
+                  setTotalBlocks(totalBlocks + 1);
+                }
+                function decrementBlocks() {
+                  if (totalBlocks) setTotalBlocks(totalBlocks - 1);
+                }
     
 
       
@@ -94,9 +102,9 @@ const PlayerCard = (props)=>{
                         <button className='decrement' onClick={decrementDrops}>-</button>
                     </h2>
                     <h2>Blocks:
-                        <p></p>
-                        <button>+</button>
-                        <button>-</button>
+                        <p>{totalBlocks}</p>
+                        <button className='increment' onClick={incrementBlocks}>+</button>
+                        <button className='decrement' onClick={decrementBlocks}>-</button>
                     </h2>
                     <div className='form_section'>
                     <h1 className='form_header_update'>Edit Player</h1>
