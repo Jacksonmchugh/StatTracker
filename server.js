@@ -34,6 +34,7 @@ app.post('/teamform', async (req, res) => {
   res.send(newTeam)
 })
 app.put('/teams/:id', async (req, res) => {
+  let teamId = parseInt(req.params.team_id)
   let updateTeam = await Team.updateOne(req.body)
   res.send(updateTeam)
 })

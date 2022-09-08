@@ -2,10 +2,10 @@ const { Schema } = require('mongoose')
 
 const teamSchema = new Schema(
   {
-    name: { type: String, required: true },
-    location: { type: String, required: true },
-    picture: { type: String, required: true },
-    description: { type: String, required: true }
+    name: { type: String, required: false },
+    location: { type: String, required: false },
+    picture: { type: String, required: false },
+    description: { type: String, required: false }
   },
   { timestamps: true }
 )

@@ -16,7 +16,6 @@ const TeamCard = (props)=>{
         name: '',
         location: '',
         picture: '',
-        players: '',
         description: ''
     }
     const [formState, setFormState]= useState(initialState)
@@ -53,9 +52,9 @@ const TeamCard = (props)=>{
         alert('You deleted this team')
         navigate('/teams')
       }
-      const refreshPage = ()=>{
-        window.location.reload()
-      }
+    //   const refreshPage = ()=>{
+    //     window.location.reload()
+    //   }
 
       const addPlayer = async ()=>{
         navigate('/newplayer')
@@ -69,7 +68,6 @@ const TeamCard = (props)=>{
                 <img className='team_card' src={team.picture} alt='team picture' />
                 <div className="details_container">
                     <h1 className="details">{team.location}</h1>
-                    <h1 className="details">{team.players}</h1>
                     <h1 className="details">{team.description}</h1>
                 </div>
                 <div className='form_section'>
@@ -116,7 +114,7 @@ const TeamCard = (props)=>{
                         <div className='form_button'>
                         </div>
                         <div className='button1'>
-                            <button type='submit' onClick={refreshPage}>
+                            <button type='submit' >
                                 Update Team
                             </button>
                         </div>

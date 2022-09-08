@@ -16,7 +16,7 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route index element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="/teams" element={<TeamList />} />
           <Route path="/players" element={<PlayerList />} />
           <Route path="/newteam" element={<TeamForm />} />
