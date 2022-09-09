@@ -50,9 +50,20 @@
 
 
 .teams{}
+ 
 
 
-.team-card{}
+.team-card{
+  width: 66%;
+  max-height: 336px;
+  margin: 10px auto 35px auto;
+  display: block;
+  object-fit: cover;
+  border: 3px solid #003049;
+  border-radius: 8px;
+  box-shadow: 6px 0 15px #2a2a2a;
+  background-color: transparent;
+}
 
 .details_page{}
 
@@ -63,16 +74,15 @@
 .team_name{}
 
 
-.team_card{}
-
-
 .details_container{}
 
 
 .details{}
 
 
-.form_section{}
+.form_section{
+ 
+}
 
 
 .form_header_update{}
@@ -84,10 +94,31 @@
 .input1{}
 
 
-.form_button{}
+.form_button{
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 20px;
+  color: white;
+  background-color: #e97b00;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  margin: 0px 5px 0px 5px;
+
+}
 
 
-.button{}
+.button{
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 20px;
+  color: white;
+  background-color: #e97b00;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  margin: 0px 5px 0px 5px;
+}
 
 
 .stats{}
