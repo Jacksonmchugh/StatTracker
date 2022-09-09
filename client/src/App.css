@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #8d03ac;
 }
 .home {
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.eventimotivazionali.it%2Fwp-content%2Fuploads%2F2020%2F03%2FUltimate-Frisbee-Eventi-Motivazionali-Team-Building-Milano-5.jpg&f=1&nofb=1");
@@ -40,20 +41,7 @@
 
 .players{}
 
-.flex{}
-
-
-.player-card{}
-
-
-.team-form{}
-
-
-.teams{}
- 
-
-
-.team-card{
+.flex{
   width: 66%;
   max-height: 336px;
   margin: 10px auto 35px auto;
@@ -63,6 +51,32 @@
   border-radius: 8px;
   box-shadow: 6px 0 15px #2a2a2a;
   background-color: transparent;
+}
+
+
+
+.player-card{}
+
+
+.team-form{
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  height: 200px;
+  width: 550px;
+  border: 3px solid #004909;
+  background-color: #c9ab05;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #ab0000;
+}
+
+
+.teams{}
+ 
+
+
+.team-card{
 }
 
 .details_page{}
