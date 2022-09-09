@@ -31,7 +31,7 @@ const PlayerCard = (props)=>{
           }
         }
         setPlayer(selectedPlayer)
-      }, [])
+      }, [id])
 
       const handleChange = (event)=>{
         setFormState({...formState, [event.target.id]: event.target.value })
