@@ -2,9 +2,9 @@ const { Schema } = require('mongoose')
 
 const statSchema = new Schema(
   {
-    scores: { type: Number, required: true },
-    blocks: { type: Number, required: true },
-    drops: { type: Number, required: true }
+    scores: { type: Number, required: false },
+    blocks: { type: Number, required: false },
+    drops: { type: Number, required: false }
   },
   { timestamps: true }
 )

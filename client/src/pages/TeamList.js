@@ -20,7 +20,7 @@ const TeamList = (props) => {
     getTeams()
   }, [props.team])
   return (
-    <section className="page" id="restaurant-list">
+    <section className="teams">
       <h3>Teams</h3>
       <div className="flex">
         {team

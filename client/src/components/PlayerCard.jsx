@@ -31,7 +31,7 @@ const PlayerCard = (props)=>{
           }
         }
         setPlayer(selectedPlayer)
-      }, [id])
+      }, [])
 
       const handleChange = (event)=>{
         setFormState({...formState, [event.target.id]: event.target.value })
@@ -130,12 +130,12 @@ const PlayerCard = (props)=>{
                         /></div>
                         <div className='form_button'>
                         </div>
-                        <div className='button1'>
+                        <div className='button'>
                             <button type='submit' >
                                 Update Player
                             </button>
                         </div>
-                        <div className='button3'>
+                        <div className='button'>
                             <button onClick={deletePlayer}>
                                 Delete Player
                             </button>

@@ -111,17 +111,17 @@ const TeamCard = (props)=>{
                         /></div>
                         <div className='form_button'>
                         </div>
-                        <div className='button1'>
+                        <div className='button'>
                             <button type='submit' >
                                 Update Team
                             </button>
                         </div>
-                        <div className='button2'>
+                        <div className='button'>
                             <button  onClick={addPlayer}>
                                 Add players
                             </button>
                         </div>
-                        <div className='button3'>
+                        <div className='button'>
                             <button onClick={deleteTeam}>
                                 Delete Team
                             </button>

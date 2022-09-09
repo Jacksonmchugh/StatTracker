@@ -1,38 +1,108 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  background-color: #7c04b0;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.team_grid{
+  background-color: transparent;
+  height: 80%;
+  position: fixed;
+  display: block;
+  margin: auto auto 130px auto;
+  display: flex;
+  justify-content: center;}
+
+.home_title{
+  position:relative;
+  justify-content: center;
+  display: block;
+
+}
+.enter{
+  position: relative;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ultimate{
+  background-color: transparent;
+  height: 100%;
+  position: relative;
 }
+
+
+.player-form{}
+
+.players{}
+
+.flex{}
+
+
+.player-card{}
+
+
+.team-form{}
+
+
+.teams{}
+
+
+.team-card{}
+
+.details_page{}
+
+
+.details_grid{}
+
+
+.team_name{}
+
+
+.team_card{}
+
+
+.details_container{}
+
+
+.details{}
+
+
+.form_section{}
+
+
+.form_header_update{}
+
+
+.form_container{}
+
+
+.input1{}
+
+
+.form_button{}
+
+
+.button{}
+
+
+.stats{}
+
+
+.increment{}
+
+
+.decrement{}
+
+
+
+.navheader{}
+
+
+.nav_bar{}

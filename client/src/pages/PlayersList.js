@@ -22,7 +22,7 @@ const PlayerList = (props) => {
   }, [props.player])
 
   return (
-    <section className="page" id="restaurant-list">
+    <section className="players">
       <h3>Players</h3>
       <div className="flex">
         {player

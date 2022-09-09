@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 const Nav =()=>{
     return(
         <nav>
-            <h1>Ultimate Stat Tracker</h1>
-            <div>
+            <h1 className='navheader'>Ultimate Stat Tracker</h1>
+            <div className='nav_bar'>
                 <NavLink to=''>Home</NavLink>
                 <NavLink to='/teams'>Teams</NavLink>
                 <NavLink to='/players'>Players</NavLink>

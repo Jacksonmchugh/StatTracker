@@ -11,7 +11,6 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static(`${__dirname}/client/build`))
 
 //  team controllers
 app.get('/teams', async (req, res) => {
@@ -35,8 +34,9 @@ app.post('/teamform', async (req, res) => {
   res.send(newTeam)
 })
 app.put('/teams/:id', async (req, res) => {
-  let teamId = parseInt(req.params.team_id)
-  let updateTeam = await Team.updateOne(req.body)
+  let updateTeam = await Team.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
   res.send(updateTeam)
 })
 app.delete('/teams/:id', async (req, res) => {
@@ -60,8 +60,9 @@ app.get('/players/:id', async (req, res) => {
   res.json(playerCard)
 })
 app.put('/players/:id', async (req, res) => {
-  let playerId = parseInt(req.params.player_id)
-  let updatePlayer = await Player.updateOne(req.body)
+  let updatePlayer = await Player.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
   res.send(updatePlayer)
 })
 app.delete('/players/:id', async (req, res) => {
@@ -70,9 +71,6 @@ app.delete('/players/:id', async (req, res) => {
   res.send(playerDetails)
 })
 
-app.get('/*', (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`)
-})
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
