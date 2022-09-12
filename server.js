@@ -4,6 +4,7 @@ const logger = require('morgan')
 const db = require('./db')
 const { Team, Player } = require('./models')
 
+const PORT = process.env.PORT || 3001
 const app = express()
 // middleware
 app.use(cors())
