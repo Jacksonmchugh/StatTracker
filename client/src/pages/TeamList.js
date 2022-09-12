@@ -20,23 +20,25 @@ const TeamList = (props) => {
     getTeams()
   }, [props.team])
   return (
-    <section className="teams">
-      <h3>Teams</h3>
-      <div className="flex">
-        {team
-          ? team.map((team) => (
-              <div
-                className="team-card"
-                onClick={() => showTeam(team)}
-                key={team._id}
-              >
-                <img src={team.picture} alt={team.name} />
-                <h2>{team.name}</h2>
-              </div>
-            ))
-          : ''}
-      </div>
-    </section>
+    <div className="team_list">
+      <section className="teams">
+        <h3>Teams</h3>
+        <div className="flex">
+          {team
+            ? team.map((team) => (
+                <div
+                  className="team-card"
+                  onClick={() => showTeam(team)}
+                  key={team._id}
+                >
+                  <img src={team.picture} alt={team.name} />
+                  <h2>{team.name}</h2>
+                </div>
+              ))
+            : ''}
+        </div>
+      </section>
+    </div>
   )
 }
 export default TeamList

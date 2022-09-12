@@ -67,8 +67,18 @@
   text-align: center;
   text-shadow: #020000;
 }
+.player{
+  background-color: #ab0000;
+  
+}
 
 .flex{}
+.team_list{
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.kids-sports-activities.com%2Fimages%2Fultimate_frisbee_gloves.jpg&f=1&nofb=1');
+  background-position: center;
+  background-size:contain;
+  height: 2000px;
+}
 
 
 
