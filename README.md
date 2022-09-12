@@ -29,7 +29,7 @@ Run npm i
 
 ### **_ScreenShots_**
 [ERD](https://i.imgur.com/44RWN7Q.png)
-(file:///Users/jacksonmchugh/Desktop/Screen%20Shot%202022-09-12%20at%2011.27.27%20AM.png)
+![Home Page](blob:https://imgur.com/702938bd-d60a-464b-b566-8bdb99f7a7df)
 
 ### **_Credits_**
 
