@@ -7,7 +7,7 @@ let dbUrl =
     : 'mongodb://127.0.0.1:27017/statTrackerDatabase'
 
 mongoose
-  .connect('process.env.MONDGODB_URL')
+  .connect('process.env.MONGODB_URL')
   .then(() => {
     console.log('Successfully connected to Stat Tracker!')
   })
