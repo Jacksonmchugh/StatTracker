@@ -27,6 +27,8 @@ Fork and Clone
 
 Run npm i
 
+Deployed site (https://peaceful-caverns-91683.herokuapp.com/)
+
 ### **_ScreenShots_**
 ![ERD](https://i.imgur.com/44RWN7Q.png)
 ![Image](https://i.imgur.com/lO3qjPY.png)
