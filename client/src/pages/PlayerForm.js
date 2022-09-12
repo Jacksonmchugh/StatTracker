@@ -65,7 +65,9 @@ function PlayerForm() {
           placeholder={'team'}
         />
 
-        <button type="submit">Add Player</button>
+        <button className="submit" type="submit">
+          Add Player
+        </button>
       </form>
     </div>
   )
