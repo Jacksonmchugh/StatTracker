@@ -30,6 +30,9 @@ Run npm i
 ### **_ScreenShots_**
 ![ERD](https://i.imgur.com/44RWN7Q.png)
 ![Image](https://i.imgur.com/lO3qjPY.png)
+![Image](https://i.imgur.com/WDuva4L.png)
+![Image](https://i.imgur.com/rGMliTt.png)
+![Image](https://i.imgur.com/iWCeNKx.png)
 
 ### **_Credits_**
 
