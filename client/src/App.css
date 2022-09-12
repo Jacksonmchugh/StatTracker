@@ -63,11 +63,12 @@
 }
 
 
-.players{}
-
-.flex{
- 
+.players{
+  text-align: center;
+  text-shadow: #020000;
 }
+
+.flex{}
 
 
 
@@ -102,12 +103,14 @@
 
 .team-card{
   width: 66%;
-  max-height: 336px;
+  max-height: 1000px;
   margin: 10px auto 35px auto;
   border: 3px solid #003049;
   border-radius: 8px;
   box-shadow: 6px 0 15px #2a2a2a;
   background-color: transparent;
+  object-fit: cover;
+  background-color: aqua;
 }
 
  

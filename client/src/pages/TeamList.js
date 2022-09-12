@@ -30,11 +30,7 @@ const TeamList = (props) => {
                 onClick={() => showTeam(team)}
                 key={team._id}
               >
-                <img
-                  style={{ display: 'block' }}
-                  src={team.picture}
-                  alt={team.name}
-                />
+                <img src={team.picture} alt={team.name} />
                 <h2>{team.name}</h2>
               </div>
             ))
