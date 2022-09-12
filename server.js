@@ -11,6 +11,7 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static(`${__dirname}/client/build`))
 
 //  team controllers
 app.get('/teams', async (req, res) => {
@@ -69,6 +70,10 @@ app.delete('/players/:id', async (req, res) => {
   let { id } = req.params
   const playerDetails = await Player.findByIdAndDelete(id)
   res.send(playerDetails)
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 app.listen(PORT, () => {
