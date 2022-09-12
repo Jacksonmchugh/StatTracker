@@ -89,7 +89,7 @@ const PlayerCard = (props)=>{
                 <h1 className='team_name'>{player.name}</h1>
                 <div className="details_container">
                     <h1 className="details">{player.age}</h1>
-                    <h1 className='details'>{player.team}</h1>
+                    <h1 className='details'>{player.team_Id}</h1>
                     <h1 className='stats'>Stats</h1>
                     <h2>Scores:
                         <p>{totalScores}</p>
