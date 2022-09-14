@@ -69,11 +69,11 @@
   text-shadow: #020000;
   
 }
-.player_background{
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd3d71ba2asa5oz.cloudfront.net%2F52000777%2Fimages%2Fz-006635__1.jpg&f=1&nofb=1');
+.players_list{
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.kids-sports-activities.com%2Fimages%2Fultimate_frisbee_gloves.jpg&f=1&nofb=1');
   background-position: center;
-  background-size: contain;
-  background-repeat: inherit;
+  background-size:contain;
+  height: 2000px;
 }
 
 

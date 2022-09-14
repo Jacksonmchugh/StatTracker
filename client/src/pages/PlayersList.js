@@ -22,7 +22,7 @@ const PlayerList = (props) => {
   }, [props.player])
 
   return (
-    <div className="playerbackground">
+    <div className="players_list">
       <section className="players">
         <h3>Players</h3>
         <div className="flex">
