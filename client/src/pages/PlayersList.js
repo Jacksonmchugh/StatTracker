@@ -22,25 +22,27 @@ const PlayerList = (props) => {
   }, [props.player])
 
   return (
-    <section className="players">
-      <h3>Players</h3>
-      <div className="flex">
-        {player
-          ? player.map((player) => (
-              <div
-                className="player-card"
-                onClick={() => showPlayer(player)}
-                key={player._id}
-              >
-                <div>
-                  <h2>{player.name}</h2>
-                  <h3>{player.team}</h3>
+    <div className="playerbackground">
+      <section className="players">
+        <h3>Players</h3>
+        <div className="flex">
+          {player
+            ? player.map((player) => (
+                <div
+                  className="player-card"
+                  onClick={() => showPlayer(player)}
+                  key={player._id}
+                >
+                  <div>
+                    <h2>{player.name}</h2>
+                    <h3>{player.team}</h3>
+                  </div>
                 </div>
-              </div>
-            ))
-          : ''}
-      </div>
-    </section>
+              ))
+            : ''}
+        </div>
+      </section>
+    </div>
   )
 }
 export default PlayerList
