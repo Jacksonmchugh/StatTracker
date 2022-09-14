@@ -67,8 +67,9 @@
 .players{
   text-align: center;
   text-shadow: #020000;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd3d71ba2asa5oz.cloudfront.net%2F52000777%2Fimages%2Fz-006635__1.jpg&f=1&nofb=1')
-  
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd3d71ba2asa5oz.cloudfront.net%2F52000777%2Fimages%2Fz-006635__1.jpg&f=1&nofb=1');
+  background-position: center;
+  background-size: contain;
 }
 
 
